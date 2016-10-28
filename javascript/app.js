@@ -1,8 +1,8 @@
  
 $(document).ready(function() {
-  var email = "gatlinrowe@gmail.com";
-  var pass = "Lolbball22";
-  var loggedin = true;
+  var email;
+  var pass;
+  var loggedin = false;
   // what is currently being searched for in the API
 	var search;
 
@@ -86,8 +86,8 @@ $(document).ready(function() {
        	    .attr('class', 'btn-link glyphicon glyphicon-sd-video')
         		.attr('id', 'sdbtn')
         		.attr('data-mp4', data.data[i].mp4)
-        		.attr('onclick', "downloadAndImport('"+data.data[i].mp4+"', '"+data.data[i].name+"')");  
-        // builds SD download button
+        		.attr('onclick', "sddl('"+data.data[i].mp4+"', '"+data.data[i].name+"')");  
+        // builds HD download button
         var hdbtn = $('<button>')
             .attr('class', 'btn-link glyphicon glyphicon-hd-video')
             .attr('id', 'hdbtn')
@@ -136,7 +136,7 @@ $(document).ready(function() {
     });
   };	
     //auto login for dev purposes
-   login(email, pass);
+   //login(email, pass);
 }); //end of doc ready
 
  // Global functions - able to be calld in onclick functions
@@ -144,6 +144,12 @@ $(document).ready(function() {
   var tokenID;
   // when Token will expire
   var tokenIDExpire;
+  function sddl(id, name){
+
+
+      window.open(id)
+    
+}
 function hddl(id, name){
    var response = $.ajax({
       url: "https://www.videezy.com/api/v2/resources/"+id+"/generate_download_url",
@@ -159,7 +165,7 @@ function hddl(id, name){
 
       tokenID = data.auth.token;
       console.log(tokenID);
-      downloadAndImport(data.url, name)
+      window.open(data.url)
     });
 }
 function loadfav(){
