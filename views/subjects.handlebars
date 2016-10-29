@@ -1,0 +1,25 @@
+{{#each subs}}
+             <div class="panel">            
+                <div role="tab" id="headingOne"> 
+                  <div id="mycarousel" class="carousel slide collapsed" data-ride="carousel" id="coll" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                          <img src="/../img/rateit_1star.png" alt="" class="img-responsive">
+                            <div class="carousel-caption">
+                            <h1>{{@index}}: {{this}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  <div class="rating">
+                    <span id="5star" onclick="console.log('5 star')">☆</span><span id="4star" onclick="console.log('4 star')">☆</span><span id="3star" onclick="console.log('3 star')">☆</span><span id="2star" onclick="console.log('2 star')">☆</span><span id="1star" onclick="console.log('1 star')">☆</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+{{/each}}
