@@ -1,104 +1,28 @@
-{
-
-	font-family: 'Suez One', serif;
-	    color: white;
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000
+/*
+	Ratings Stars
+	(with as little code as possible)
+*/
+span {
+  font-size: 200%;
 }
-#logo{
-max-height: 40px;
-padding: 10%;
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: right;
 }
-.thumbnail {
-  background-color: #262626;
-  border: none;
-  padding: 0;
-  height: 110px;
-  width: 200px;
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
 }
-.btn-link {
-  color: white;
-  top: -30px;
-  right: -110px;
-  border: 1; 
-
+.rating > span:hover,
+.rating > span:hover ~ span {
+  color: transparent;
 }
-.btn-link:hover {
-}
-
-video {
-  height: 110px;
-  width: 200px;
-  padding: 0px;
-}
-
-input, body {
-  background-color: #262626;
-  border-color: white;
-  border: 1px;
-}
-h2 {
-  color: white;
-}
-.btn{
-  background-color: #151515;
-  color: #a2a2a2;
-  border-color: #151515
-}
-.btn:hover {
-  background-color: none;
-  color: none;
-}
-.btn:focus{
-  background-color: #a2a2a2;
-  color: black;
-}
-.modal-content  {
-   background-color: #262626;
-   color: white;
-}
-.form-control {
-  background-color: #151515;
-  color: #a2a2a2;
-}
-#panel {
-  color: #1a1a1a;
-}
-.navbar {
-  background-color: #262626;
-  border: none;
-}
-.nav-tabs{
-  border: none;
-
-}
-.tab-content{
-    background-color:#303136;
-    color:#fff;
-    padding:5px
-}
-.nav-tabs > li > a{
-  background-color: none;
-  border: none;
-  color: #1a1a1a;
-}
-
-
-.nav-tabs > li > a:hover{
-  background-color: #a2a2a2 !important;
-    border: none;
-    border-radius: 0;
-    color:#fff;
-}
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
-  color: #555;
-  cursor: default;
-  background-color: #303136;
-  border: none;
-  border-bottom: none;
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   left: 10; 
+   color: gold;
 }
