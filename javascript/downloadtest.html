@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+// GET /:id/generate_download_url
+// a0650325dae10d1fcf929ce12303eb67
+// 3972
+runapi = function() {
+	console.log('1');
+	 var response = $.ajax({
+      url: "https://www.videezy.com/api/v2/resources/2195/unfavorite?token=8702f7831f94b864d13f1ddef8f7bdfd",
+      method: "POST"
+    });
+
+    //makes call and waits for callback data
+    response.done(function( data ) {
+      console.log(data)
+
+    });
+};
+runapi();
+</script>
+
+</body>
+</html>
