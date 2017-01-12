@@ -1,113 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>Videezy</title>
-	<meta charset="utf-8" />
-    <script src="./lib/CSInterface.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Suez+One" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<title>VGA Test</title>
+	<script src="app.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="javascript/app.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="http://doctrinedesign.com/vecteezy/bodymovin.js"></script>
+	<script src="http://www.doctrinedesign.com/vecteezy/editorcenter/data.js"></script>
 </head>
 <body>
-
-<!-- Logout Modal -->
-	<div class="modal modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  	<div class="modal-dialog" role="document">
-	    	<div class="modal-content">
-	      		<div class="modal-header">
-	       			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	       			<h4 class="modal-title" id="myModalLabel">Are you sure you want to logout?</h4>
-	      		</div>
-      			<div class="modal-body">
-					<button type="button" id="logoutbtn" class="btn btn-default" data-dismiss="modal">Logout</button>
-        			<button type="button" id='cancelbtn' class="btn btn-default" data-dismiss="modal">Cancel</button>
-        			
-      			</div>
-   			</div>
-  		</div>
-	</div>
-<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  	<div class="modal-dialog" role="document">
-	    	<div class="modal-content">
-	      		<div class="modal-header">
-	       			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	       			<h4 class="modal-title" id="myModalLabel">Login</h4>
-	      		</div>
-      			<div class="modal-body">
-      				<div id=error></div>
-        			<label for="basic-url">Email</label>
-					<div class="input-group">
-  						<input type="text"  class="form-control" placeholder="john@videezy.com" id="emailform" aria-describedby="basic-addon3">
-					</div>
-					<label for="basic-url">Password</label>
-					<div class="input-group">
-  						<input type="password" class="form-control" id="passform" aria-describedby="basic-addon3">
-					</div>
-      			</div>
-      			<div class="modal-footer">
-
-      			<!-- ONLY WORKS IN PANEL -->
-        			<button type="button" id='registerbtn' class="btn btn-default" data-dismiss="modal">Register
-        			</button>
-        			<button type="button" id="loginbtn" class="btn btn-default">Login</button>
-      			</div>
-   			</div>
-  		</div>
-	</div>
-<!-- Container -->
-	<div class="container">
-		<div class="row" id="header" >
-
-
-
-
-		  <!-- Nav tabs -->
-			<ul class="nav nav-tabs" role="tablist">
-				<!-- Search Tab -->
-				<li role="presentation" id="panel" class="active"><a href="#searchtab" class="glyphicon glyphicon-search" aria-controls="searchtab" role="tab" data-toggle="tab"></a></li>
-				<!-- Favorite Tab -->
-		    	<li role="presentation"><a id="loadfav" href="#favtab" class="glyphicon glyphicon-heart" aria-controls="favtab" role="tab" data-toggle="tab"></a></li>
-		    	<!-- Download Tab -->
-		    	<li role="presentation"><a  id="downloadManager" href="#downloadtab" class="glyphicon glyphicon-download" aria-controls="downloadtab" role="tab" data-toggle="tab"></a></li>
-		    	<!-- Logo -->
-		    	<li role="presentation"><img id="logo" src="./videezy_logo.png">
-		    	<li role="presentation" class="pull-right"><button id="loginmodal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" value="Login">Login</button>
-
-			</ul>
-			
-			<!-- Tab panes -->
-			<div class="tab-content">
-			   	<div role="tabpanel" class="tab-pane active" id="searchtab">
-					<div class="row" id="searchbar">
-						<div class="col-xs-6 col-xs-offset-3">
-							<div class="input-group">
-						      	<input type="text" class="form-control" id="search" placeholder="Search for...">
-						      	<span class="input-group-btn">
-						        	<button class="btn glyphicon glyphicon-search" id="addSearch" type="button"></button>
-						      	</span>
-						    </div><!-- /input-group -->
-						</div><!-- /.col-lg-6 -->	  		
-					</div><!-- /.row -->
-					<div id="js-progress" class="row">poop</div>		
-					<div id="videos" class="row"></div>
-					<div id="pages" class="row"></div>
-
-				</div>
-
-				<div role="tabpanel" class="tab-pane fade" id="favtab">
-					<div id="favorites" class="row"></div>
-				</div>
-				<div role="tabpanel" class="tab-pane fade" id="downloadtab">
-					<div id="downloaded" class="row"></div>
-				</div>
-			</div>			
-		</div><!-- /#header-->		
-	</div>
-
+<div id="svgContainer"></div>
 </body>
 </html>
